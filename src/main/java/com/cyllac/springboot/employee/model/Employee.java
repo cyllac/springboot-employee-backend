@@ -1,4 +1,4 @@
-package com.cyllac.springboot.employee.entity;
+package com.cyllac.springboot.employee.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,7 +16,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "employees")
 public class Employee {
@@ -32,7 +30,8 @@ public class Employee {
 	@Column(name = "last_name")
 	private String lastName;	
 	
-	private String email;
+	@Column(name = "email_id")
+	private String emailId;
 
 	
 }
